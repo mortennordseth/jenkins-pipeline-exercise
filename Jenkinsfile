@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Results'){
             steps{
-                echo 'Holla Results!'
+                junit '**/build/test-results/test/TEST-*.xml'
             }
         }
     }
