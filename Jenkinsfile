@@ -14,8 +14,9 @@ pipeline {
         }
         stage('Results'){
             steps{
-                junit '**/build/test-results/test/TEST-*.xm'
+            
                 archiveArtifacts artifacts: 'build/libs', fingerprint: true
+                junit '**/build/test-results/test/TEST-*.xm'
             }
         }
     }
